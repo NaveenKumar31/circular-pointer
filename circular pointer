@@ -1,0 +1,21 @@
+
+    public static long getTime(String s) {
+    char ch='A';
+    long x=0;
+    for(int i=0;i<s.length();i++){
+        int y=Math.abs(ch-s.charAt(i));
+        if(y<13){
+            x+=y;
+            ch=s.charAt(i);
+        }
+        else{
+            x+=26-y;
+            ch=s.charAt(i);
+        }
+    }
+    return x;
+       
+
+    }
+
+}
